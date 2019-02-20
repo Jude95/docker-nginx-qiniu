@@ -11,8 +11,7 @@ local_path = os.environ['LOCAL_PATH']
 remote_path = os.environ['REMOTE_PATH']
 
 print("start upload to qiniu")
-if os.path.isdir(local_path):
-else:
+if not os.path.isdir(local_path):
     print(local_path + " is not exist")
 
 q = Auth(access_key, secret_key)
